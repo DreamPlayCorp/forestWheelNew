@@ -3,6 +3,8 @@ import {Geist, Geist_Mono} from "next/font/google";
 import "../../globals.css";
 import {NextIntlClientProvider} from "next-intl";
 import {getMessages, setRequestLocale} from "next-intl/server";
+import {cookies} from "next/headers";
+import AutoLanguageRedirect from "@/app/AutoRedirector";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -28,11 +30,12 @@ export default async function LocaleLayout({children, params}: {
     const messages = await getMessages();
 
     setRequestLocale(locale);
+
     return (
         <html lang={locale}>
         <body className={`relative overflow-hidden`}>
         <NextIntlClientProvider messages={messages}>
-
+        <AutoLanguageRedirect/>
             <div className="popup">
                 <h2>CONGRATS!</h2>
                 <p>YOU HAVE WON:</p>

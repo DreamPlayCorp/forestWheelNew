@@ -62,7 +62,7 @@ const Wheel = ({setBlur, labels, weights, wordWrapWidthCoeff, pairGradient, oddG
             ring.y = app.screen.height / 2;
 
             canvasRef.current?.appendChild(app.canvas);
-
+            appRef.current = app;
             const wheel = new Graphics();
             const radius = (app.screen.width / 2) - 25;
             const cx = app.screen.width / 2;
@@ -192,7 +192,7 @@ const Wheel = ({setBlur, labels, weights, wordWrapWidthCoeff, pairGradient, oddG
 
 
         return () => {
-            appRef.current?.destroy(true);
+            appRef?.current?.destroy(true, true)
         };
     }, []);
 

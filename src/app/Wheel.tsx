@@ -7,9 +7,11 @@ interface Props {
     weights: number[];
     setBlur: (value: boolean) => void;
     wordWrapWidthCoeff: number;
+    pairGradient: string;
+    oddGradient: string;
 }
 
-const Wheel = ({setBlur, labels, weights, wordWrapWidthCoeff}: Props) => {
+const Wheel = ({setBlur, labels, weights, wordWrapWidthCoeff, pairGradient, oddGradient}: Props) => {
     const canvasRef = useRef<HTMLDivElement>(null);
     const appRef = useRef<Application>(null);
     const spinningRef = useRef(false);
@@ -39,8 +41,8 @@ const Wheel = ({setBlur, labels, weights, wordWrapWidthCoeff}: Props) => {
 
             app.resize();
 
-            const grad1 = await Assets.load('./grad1.png')
-            const grad2 = await Assets.load('./grad2.png');
+            const grad1 = await Assets.load(oddGradient)
+            const grad2 = await Assets.load(pairGradient);
             const ringImage = await Assets.load('./Ring.png')
             const arrowImage = await Assets.load('./arrow.png')
             const spinButtonImage = await Assets.load('./button.png')

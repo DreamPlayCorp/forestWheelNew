@@ -9,13 +9,14 @@ interface Props {
     wordWrapWidthCoeff: number;
     pairGradient: string;
     oddGradient: string;
+    pairColorText?: string;
+    oddColorText?: string;
 }
 
-const Wheel = ({setBlur, labels, weights, wordWrapWidthCoeff, pairGradient, oddGradient}: Props) => {
+const Wheel = ({setBlur, labels, weights, wordWrapWidthCoeff, pairGradient, oddGradient, oddColorText = '#000000', pairColorText = '#ffffff'}: Props) => {
     const canvasRef = useRef<HTMLDivElement>(null);
     const appRef = useRef<Application>(null);
     const spinningRef = useRef(false);
-
     useEffect(() => {
         const mainContainer = document.getElementById('container')!;
         const popup = document.querySelector('.popup');
@@ -95,7 +96,7 @@ const Wheel = ({setBlur, labels, weights, wordWrapWidthCoeff, pairGradient, oddG
                 sectorMask.arc(0, 0, radius, startAngle, endAngle);
                 sectorMask.lineTo(0, 0);
                 sectorMask.endFill();
-                const texturePath = i % 2 !== 0 ? './grad1.png' : './grad2.png';
+                const texturePath = i % 2 !== 0 ? oddGradient : pairGradient;
                 const gradSprite = new Sprite(Texture.from(texturePath));
                 gradSprite.anchor.set(0.5);
                 gradSprite.width = radius * 2.5;
@@ -113,7 +114,7 @@ const Wheel = ({setBlur, labels, weights, wordWrapWidthCoeff, pairGradient, oddG
                 const text = new Text({
                     text: label,
                     style: new TextStyle({
-                        fill: i % 2 === 0 ? '#ffffff' : '#000000',
+                        fill: i % 2 === 0 ? pairColorText : oddColorText,
                         fontSize: Math.max(12, app.screen.width * 0.035),
                         align: 'center',
                         fontWeight: 'bold',

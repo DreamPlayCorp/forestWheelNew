@@ -36,20 +36,20 @@ export default async function LocaleLayout({children, params}: {
         <body className={`relative overflow-hidden`}>
         <NextIntlClientProvider messages={messages}>
         <AutoLanguageRedirect/>
-            <div className="popup">
-                <h2>CONGRATS!</h2>
-                <p>YOU HAVE WON:</p>
+            {/*<div className="popup">*/}
+            {/*    <h2>CONGRATS!</h2>*/}
+            {/*    <p>YOU HAVE WON:</p>*/}
 
-                <div className="content">
-                    <div className="content-image">
-                        <img src="/ezgif-2-572a4b516b%201.png" alt="" className="girl"/>
-                    </div>
-                    <p>
-                        500% Welcome Bonus up to €6,000 and 777 Free Spins
-                    </p>
-                </div>
-                <a href="https://dreamplay.bet/?registration=true" className="button-claim">Claim</a>
-            </div>
+            {/*    <div className="content">*/}
+            {/*        <div className="content-image">*/}
+            {/*            <img src="/ezgif-2-572a4b516b%201.png" alt="" className="girl"/>*/}
+            {/*        </div>*/}
+            {/*        <p>*/}
+            {/*            500% Welcome Bonus up to €6,000 and 777 Free Spins*/}
+            {/*        </p>*/}
+            {/*    </div>*/}
+            {/*    <a href="https://dreamplay.bet/?registration=true" className="button-claim">Claim</a>*/}
+            {/*</div>*/}
             {children}
 
         </NextIntlClientProvider>

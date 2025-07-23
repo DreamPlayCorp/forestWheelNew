@@ -77,8 +77,8 @@ const Wheel = ({setBlur, labels, weights, wordWrapWidthCoeff, pairGradient, oddG
             arrow.y = cy - radius;
 
             button.anchor.set(0.5);
-            button.width = radius / 3;
-            button.height = radius / 3;
+            button.width = radius / 2.2;
+            button.height = radius / 2.2;
             button.x = cx;
             button.y = cy;
             button.eventMode = 'static';

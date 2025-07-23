@@ -21,7 +21,6 @@ export default function Home() {
     }
 
     const params = getParams(['stag', 'tracking_link'], paramsObj)
-    console.log(params);
     const [blur, setBlur] = useState<boolean>(false);
     const labels = [
         t('sectors.first'),
@@ -56,8 +55,10 @@ export default function Home() {
             labels={labels}
             weights={weights}
             wordWrapWidthCoeff={+t('coeff')}
-            oddGradient={'./grad1.png'}
-            pairGradient={'./grad2.png'}
+            oddGradient={'./grad3.png'}
+            pairGradient={'./grad4.png'}
+            oddColorText={'#fff'}
+            pairColorText={'#fff'}
         />
         </div>
         <Modal show={blur} elementClass={'popup'} activeClass={'active'} >

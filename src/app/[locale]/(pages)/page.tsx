@@ -70,7 +70,7 @@ export default function Home() {
                         <img src="/ezgif-2-572a4b516b%201.png" alt="" className="girl"/>
                     </div>
                     <p>
-                        500% Welcome Bonus up to €6,000 and 777 Free Spins
+                        500% Welcome Bonus up to 9 000 С$ and 777 Free Spins
                     </p>
                 </div>
                 <a href={`https://dreamplay.bet/?registration=true&stag=${params.stag}&tracking_link=${params.tracking_link}`} className="button-claim">Claim</a>

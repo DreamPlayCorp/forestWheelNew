@@ -380,7 +380,6 @@ canvas {
         font-size: 18px;
         line-height: 22px;
         max-width: 316px;
-        margin: 0 auto 104px;
     }
     @media screen and (max-width: 390px) {
         margin: 0 auto -50px;

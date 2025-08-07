@@ -125,8 +125,8 @@ const Wheel = ({setBlur, labels, weights, wordWrapWidthCoeff, pairGradient, oddG
                 });
                 const textAngle = startAngle + sectorAngle / 2;
                 text.anchor.set(0.5, 0.5);
-                text.x = Math.cos(angle) * radius * 0.6;
-                text.y = Math.sin(angle) * radius * 0.6;
+                text.x = Math.cos(angle) * radius * 0.55;
+                text.y = Math.sin(angle) * radius * 0.55;
 
                 // Поворот тексту по куту сектора (щоб був паралельний радіусу)
                 text.rotation = textAngle;

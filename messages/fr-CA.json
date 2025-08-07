@@ -5,14 +5,14 @@
   "headerYellowSecond": "777 tours gratuits",
   "headerFinish": " — un accueil digne de la royauté.",
   "sectors": {
-    "first": "1 BTC",
-    "second": "500% ET 777 TOURS",
-    "third": "C$15.000",
-    "fourth": "TENTE ENCORE!",
-    "fifth": "PSS PRO",
-    "sixth": "500%",
-    "seventh": "TENTE ENCORE!",
-    "eighth": "777 FS"
+    "first": "200% de Bonus",
+    "second": "500% et 777 tours gratuits",
+    "third": "100 tours gratuits",
+    "fourth": "Réessayez!",
+    "fifth": "75 tours gratuits",
+    "sixth": "100% de Bonus",
+    "seventh": "30 tours gratuits",
+    "eighth": "50% de Bonus"
   },
-  "coeff": "0.2"
+  "coeff": "0.3"
 }

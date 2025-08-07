@@ -11,10 +11,10 @@ export const metadata: Metadata = {
 
 export default async function LocaleLayout({children, params}: {
     children: React.ReactNode;
-    params: { locale: 'en' | 'de' }
+    params: { locale: 'pt' }
 }) {
     // @ts-ignore
-    const {locale}: 'en' | 'de' = await params;
+    const {locale}: 'pt' = await params;
     const messages = await getMessages();
 
     setRequestLocale(locale);
@@ -23,7 +23,7 @@ export default async function LocaleLayout({children, params}: {
         <html lang={locale}>
         <body className={`relative overflow-hidden`}>
         <NextIntlClientProvider messages={messages}>
-        <AutoLanguageRedirect/>
+        {/*<AutoLanguageRedirect/>*/}
             {children}
         </NextIntlClientProvider>
         </body>

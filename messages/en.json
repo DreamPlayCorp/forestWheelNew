@@ -5,14 +5,14 @@
   "headerYellowSecond": "777 Free Spins",
   "headerFinish": " greet you like royalty.",
   "sectors": {
-    "first": "1 BTC",
-    "second": "500% AND 777 FS",
-    "third": "€10.000",
+    "first": "200% Bonus",
+    "second": "500% and 777 Free Spins",
+    "third": "100 Free Spins",
     "fourth": "TRY AGAIN",
-    "fifth": "PSS PRO",
-    "sixth": "500%",
-    "seventh": "TRY AGAIN",
-    "eighth": "777 FS"
+    "fifth": "50% Bonus",
+    "sixth": "75 Free Spins",
+    "seventh": "100% Bonus",
+    "eighth": "30 Free Spins"
   },
-  "coeff": "0.2"
+  "coeff": "0.3"
 }

@@ -14,5 +14,9 @@
     "seventh": "Bonus de 100%",
     "eighth": "30 Rodadas Grátis"
   },
-  "coeff": "0.2"
+  "coeff": "0.2",
+  "modal_header1": "PARABÉNS!",
+  "modal_header2": "GANHOU:",
+  "modal_description": "Bónus de Boas-Vindas de 500% até 6 000 € e 777 Rodadas Grátis",
+  "modal_button": "Resgatar"
 }

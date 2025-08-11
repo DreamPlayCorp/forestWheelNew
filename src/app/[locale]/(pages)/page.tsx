@@ -4,6 +4,7 @@ import Wheel from "@/app/Wheel";
 import {useTranslations} from "next-intl";
 import {ReadonlyURLSearchParams, useSearchParams} from "next/navigation";
 import Modal from "@/app/components/modal/modal";
+import Image from "next/image";
 interface Params {
     [key: string]: string | null;
 }
@@ -38,7 +39,7 @@ export default function Home() {
     return <main className={` ${blur ? 'blur' : null}`}>
         <div className="wrapper">
             <div className="logo">
-                <img src="/Container.png" alt="logo"/>
+                <Image src="/Container.png" alt="logo" width="232" height="65" />
             </div>
             <p className="header">
                 {t('headerTop')} <br/> <span className="yellow">{t('headerYellowFirst')}</span>
@@ -62,18 +63,18 @@ export default function Home() {
         />
         </div>
         <Modal show={blur} elementClass={'popup'} activeClass={'active'} >
-                <h2>CONGRATS!</h2>
-                <p>YOU HAVE WON:</p>
+                <h2>{t('modal_header1')}</h2>
+                <p>{t('modal_header2')}</p>
 
                 <div className="content">
                     <div className="content-image">
                         <img src="/ezgif-2-572a4b516b%201.png" alt="" className="girl"/>
                     </div>
                     <p>
-                        500% Welcome Bonus up to 9 000 С$ and 777 Free Spins
+                        {t('modal_description')}
                     </p>
                 </div>
-                <a href={`https://dreamplay.bet/?registration=true&stag=${params.stag}&tracking_link=${params.tracking_link}`} className="button-claim">Claim</a>
+                <a href={`https://dreamplay.bet/?registration=true&stag=${params.stag}&tracking_link=${params.tracking_link}`} className="button-claim">{t("modal_button")}</a>
         </Modal>
     </main>;
 }

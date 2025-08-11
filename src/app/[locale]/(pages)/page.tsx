@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import {useEffect, useState} from 'react';
 import Wheel from "@/app/Wheel";
 import {useTranslations} from "next-intl";
 import {ReadonlyURLSearchParams, useSearchParams} from "next/navigation";
@@ -23,6 +23,16 @@ export default function Home() {
 
     const params = getParams(['stag', 'tracking_link'], paramsObj)
     const [blur, setBlur] = useState<boolean>(false);
+    const [showPopup, setShowPopup] = useState<boolean>(false);
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            if(blur) {
+                setShowPopup(true);
+            }
+        }, 300)
+
+        return () => clearTimeout(timer);
+    }, [blur]);
     const labels = [
         t('sectors.first'),
         t('sectors.second'),
@@ -62,7 +72,7 @@ export default function Home() {
             pairColorText={'#fff'}
         />
         </div>
-        <Modal show={blur} elementClass={'popup'} activeClass={'active'} >
+        <Modal show={blur} elementClass={'popup'} activeClass={showPopup ? 'active' : ''} >
                 <h2>{t('modal_header1')}</h2>
                 <p>{t('modal_header2')}</p>
 

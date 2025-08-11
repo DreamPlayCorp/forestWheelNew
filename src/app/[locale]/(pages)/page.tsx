@@ -56,19 +56,19 @@ export default function Home() {
                 {t('and')} <span className="yellow">{t('headerYellowSecond')}</span> {t('headerFinish')}
             </p>
             <div className="avatar-wrapper left">
-                <img src="/girl.webp" alt="" className="avatar"/>
+                <Image width={448} height={536} src="/left_target.webp" alt="" className="avatar"/>
             </div>
             <div className="avatar-wrapper right">
-                <img src="/boy.webp" alt="" className="avatar"/>
+                <Image width={448} height={622} src="/hunter.webp" alt="" className="avatar"/>
             </div>
         <Wheel
             setBlur={setBlur}
             labels={labels}
             weights={weights}
             wordWrapWidthCoeff={+t('coeff')}
-            oddGradient={'./grad1.png'}
-            pairGradient={'./grad2.png'}
-            oddColorText={'#000'}
+            oddGradient={'./grad3.png'}
+            pairGradient={'./grad4.png'}
+            oddColorText={'#fff'}
             pairColorText={'#fff'}
         />
         </div>

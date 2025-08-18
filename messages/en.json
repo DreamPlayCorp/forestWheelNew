@@ -14,5 +14,9 @@
     "seventh": "100% Bonus",
     "eighth": "30 Free Spins"
   },
-  "coeff": "0.3"
+  "coeff": "0.3",
+  "popup_congrats": "CONGRATS!",
+  "popup_won": "YOU HAVE WON:",
+  "popup_prize": "500% Welcome Bonus up to €6,000 and 777 Free Spins",
+  "popup_button": "Claim"
 }

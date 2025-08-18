@@ -62,18 +62,18 @@ export default function Home() {
         />
         </div>
         <Modal show={blur} elementClass={'popup'} activeClass={'active'} >
-                <h2>CONGRATS!</h2>
-                <p>YOU HAVE WON:</p>
+                <h2>{t('popup_congrats')}</h2>
+                <p>{t('popup_won')}</p>
 
                 <div className="content">
                     <div className="content-image">
                         <img src="/ezgif-2-572a4b516b%201.png" alt="" className="girl"/>
                     </div>
                     <p>
-                        500% Welcome Bonus up to 9 000 С$ and 777 Free Spins
+                        {t('popup_prize')}
                     </p>
                 </div>
-                <a href={`https://dreamplay.bet/?registration=true&stag=${params.stag}&tracking_link=${params.tracking_link}`} className="button-claim">Claim</a>
+                <a href={`https://dreamplay.bet/?registration=true&stag=${params.stag}&tracking_link=${params.tracking_link}`} className="button-claim">{t('popup_button')}</a>
         </Modal>
     </main>;
 }

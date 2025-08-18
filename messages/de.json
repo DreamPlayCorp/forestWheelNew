@@ -14,5 +14,9 @@
     "seventh": "30 Freispiele",
     "eighth": "50 % Bonus"
   },
-  "coeff": "0.3"
+  "coeff": "0.3",
+  "popup_congrats": "GLÜCKWUNSCH!",
+  "popup_won": "SIE HABEN GEWONNEN:",
+  "popup_prize": "500 % Willkommensbonus und bis zu 6.000 € und 777 Freispiele",
+  "popup_button": "Beanspruchen Sie"
 }
